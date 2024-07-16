@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link id="css-thing" rel="stylesheet" href="styles.css" />
-    <title>SQTech Website</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>SQBank</title>
   </head>
   <body>
     <header id="login-banner" class="banner">SQBank Login</header>
@@ -12,13 +13,15 @@
       <p class="centered">
       Username:
     </p>
-    <input class="centered" id="user" type="text">
+    <input onkeydown="if (event.keyCode == 13) { processData(); return false; }" class="centered" id="user" type="text">
     <p class="centered">
       Password:
     </p>
-    <input class="centered" id="pass" type="password">
+    <input onkeydown="if (event.keyCode == 13) { processData(); return false; }" class="centered" id="pass" type="password">
     <br>
-    <div class="container"><button onclick="processData()">Sign In</button></div>
+    <div class="container"><button class="btn" onclick="processData()">Sign In</button></div>
+    <br>
+    <div class="container"><button class="errorButton">Error, account not found.</button></div>
     
   </div>
     
