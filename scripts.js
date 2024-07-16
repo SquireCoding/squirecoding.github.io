@@ -1,3 +1,13 @@
+var using = '';
+var craften = '';
+
+document.getElementsByClassName('errorButton')[0].style.visibility='hidden';
+
+if (getCookie('username')!=='') {
+    console.log('Login info found!');
+    passTo(getCookie('username'),getCookie('password'));
+} else console.log("Login info not found.");
+
 function ecb(inputString) {
     const binaryArray = [];
     for (let i = 0; i < inputString.length; i++) {
@@ -38,7 +48,47 @@ function run() {
 }
 
 function processData() {
-    let user = document.getElementById('user').value;
+    let username = document.getElementById('user').value;
     let pass = document.getElementById('pass').value;
-    console.log(user+', '+pass);
+    passTo(username,pass);
+    
+}
+
+function passTo(username,pass) {
+    using = getName(username,pass);
+    if (using!==null) {
+        setCookie('username',username,1);
+        setCookie('password',pass,1);
+        loadBankPage();
+    } else {
+        document.getElementsByClassName('errorButton')[0].style.visibility='visible';
+    }
+}
+
+function loadBankPage() {
+    document.body.innerHTML=`
+    <h1>Welcome, ${using}</h1> 
+    <hr>
+    <h2>Current Craften in Account: ${getCraften()}
+    `;
+}
+
+function getName(user, pass) {
+    if (user==='YBG_Gaming'&&ecb(pass)==='0101000001100101011000010110001101101000010000100110111101101101011000100110010101110010') {
+        return 'YBG';
+    }
+    if (user='TheCaptain'&&ecb(pass)==='01101111011011100111100101101111011101010111001001101100011001010110011001110100') {
+        return 'Cap';
+    }
+    return null;
+}
+
+function getCraften() {
+    if (using==='YBG') return "33C";
+    return "Error getting craften";
+}
+function getCards() {
+    if (using==='YBG') {
+        return `Debit Card`;
+    }
 }
