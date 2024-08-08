@@ -10,6 +10,7 @@ input {
 }
 
 .btn {
+    margin-left:10px;
     background-color: #fff;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
@@ -91,3 +92,91 @@ p {
 .container {
     text-align: center;
   }
+
+.lougout {
+text-align: right;
+}
+
+.topcorner{
+position:absolute;
+top:1rem;
+right:1rem;
+}
+h1 {
+    margin-left:10px;
+}
+h2 {
+    margin-left:10px;
+}
+
+.wider {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: .5rem 1rem;
+    width: 300px;
+    height: 80px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.wider:hover {
+    background-color: #939393;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: .5rem 1rem;
+    width: 300px;
+    height: 80px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.widerred {
+    background-color: #ff0000;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: .5rem 1rem;
+    width: 300px;
+    height: 80px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.widerred:hover {
+    background-color: #950101;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    padding: .5rem 1rem;
+    width: 300px;
+    height: 80px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+
+.red {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+.red:hover {
+color: rgb(162, 55, 55);
+background-color: transparent;
+text-decoration: underline;
+}
+
+.green {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+.green:hover {
+color: rgb(2, 79, 2);
+background-color: transparent;
+text-decoration: underline;
+}
