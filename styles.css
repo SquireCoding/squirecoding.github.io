@@ -180,3 +180,19 @@ color: rgb(2, 79, 2);
 background-color: transparent;
 text-decoration: underline;
 }
+
+h3 {
+    margin-left:20px;
+}
+
+.good {
+    color: rgb(0, 255, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.bad {
+    color: rgb(255, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+}
