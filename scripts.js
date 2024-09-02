@@ -206,10 +206,10 @@ function getCards() {
     let returned = '';
 
     if (using==='YBG') returned= getCardItem("Normal Debit Card",'Active')+getCardItem("Normal Credit Card",'Active');
-    if (using==='Cap') returned= "- You have no active cards.";
-    if (using==='Carrie') returned= "- You have no active cards.";
-    if (using==='SMARTS') returned= "- You have no active cards.";
-    if (using==='[E]') returned= "- You have no active cards.";
+    if (using==='Cap') returned= getCardItem("Normal Debit Card",'Active');
+    if (using==='Carrie') returned= getCardItem("Normal Debit Card",'Active');
+    if (using==='SMARTS') returned= getCardItem("Normal Debit Card",'Active');
+    if (using==='[E]') returned= getCardItem("Normal Debit Card",'Active');
     if (using==='Bad Guy') returned= "You do not have an account.";
     if (using==='Deatheye') returned= "You do not have an account.";
     if (using==='MortalTripod') returned= getCardItem("Normal Debit Card",'Active');
@@ -239,7 +239,7 @@ function getCardButton(cardname) {
 }
 
 function getPersonButton(cardname) {
-    return `<a href="${getEmailLink('Craften transfer request: '+using+ ' to ' + cardname, 'This a request for a transfer of AMOUNTHERE.')}"><button class="wider">${cardname}</button></a>`;
+    return `<a href="${getEmailLink('Craften transfer request: '+using+ ' to ' + cardname, 'This a request for a transfer of AMOUNTHERE. If this is a request for a transfer due to to a business transaction, put the 5/6 digit number HERE.')}"><button class="wider">${cardname}</button></a>`;
 }
 
 function getCardFailButton(cardname) {
@@ -255,7 +255,7 @@ function removeAfterBrTag(inputString) {
 }
 
 function getPurchases() {
-    if (using==='YBG') return [new Purchase(-getStartingCraften(), 'Starting Balance'), new Purchase(50,'SQTech Mail Order'),new Purchase(-58,'In Person Deposit')];
+    if (using==='YBG') return [new Purchase(-getStartingCraften(), 'Starting Balance'), new Purchase(50,'SQTech Mail Order'),new Purchase(-58,'In Person Deposit'),new Purchase(32,'SQTech Mega')];
     if (using==='Cap') return null;
     if (using==='Carrie') return null;
     if (using==='SMARTS') return null;
